@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <main class="app">
+        <header class="header">
+            <p class="tagline">YOUR PERSONAL PLANNER</p>
+            <h1>My Tasks<span>.</span></h1>
+            <p class="subtitle">Small steps, big achievements.</p>
+        </header>
+
+        <section class="task-input">
+            <form id="taskForm">
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="What needs to be done?"
+                    autocomplete="off"
+                    aria-label="Enter a new task"
+                    maxlength="200"
+                >
+                <button type="submit" id="submitBtn">+ Add</button>
+            </form>
+        </section>
+
+        <section class="task-section">
+            <div class="list-heading">
+                <h2>Your task list</h2>
+                <span id="taskCount">0 tasks left</span>
+            </div>
+
+            <nav class="filters" aria-label="Filter tasks">
+                <button class="filter-btn active" data-filter="all"
+                    aria-pressed="true">All</button>
+                <button class="filter-btn" data-filter="active"
+                    aria-pressed="false">Active</button>
+                <button class="filter-btn" data-filter="completed"
+                    aria-pressed="false">Completed</button>
+            </nav>
+
+            <ul id="taskList" class="task-list"></ul>
+
+            <p id="emptyMessage" class="empty-message">
+                No tasks here yet. Add your first task!
+            </p>
+
+            <div class="footer">
+                <span id="completedCount">0 completed</span>
+                <button id="clearCompleted" class="clear-btn">
+                    Clear completed
+                </button>
+            </div>
+        </section>
+
+        <p class="bottom-note">Made with focus and a little progress ✨</p>
+    </main>
+
+</body>
+</html>
